@@ -15,14 +15,16 @@ int charFind(const char text[], char letter) {
 
 }
 
-int substringFind(const char str[], const char substr[]) {
+int substringFind(const char text[], const char word[]) {
 
-    for (int i = 0; str[i] != '\0'; i++) {
+    for (int i = 0; text[i] != '\0'; i++) {
         int j = 0;
-        while (substr[j] != '\0' && str[i + j] == substr[j]) {
+
+        while (word[j] != '\0' && text[i + j] == word[j]) {
             j++;
         }
-        if (substr[j] == '\0') {
+        
+        if (word[j] == '\0') {
             return i;
         }
     }
@@ -35,7 +37,7 @@ int main() {
 
     const char sentence[] = "The quick brown fox";
 
-    cout << "Find Character 'a': " << charFind(sentence, 'a') << "\n";
+    cout << "Find Character 'e': " << charFind(sentence, 'e') << "\n";
     cout << "Find Substring \"quick\": " << substringFind(sentence, "quick") << "\n";
     cout << "Find Character ' ': " << charFind(sentence, ' ') << "\n";
     cout << "Find Character 'z': " << charFind(sentence, 'z') << "\n";    
