@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int charFind(const char text[], char letter) {
+int find(const char text[], char letter) {
 
     int i = 0;
     while (text[i] != '\0') {   
@@ -15,7 +15,7 @@ int charFind(const char text[], char letter) {
 
 }
 
-int substringFind(const char text[], const char word[]) {
+int find(const char text[], const char word[]) {
 
     for (int i = 0; text[i] != '\0'; i++) {
         int j = 0;
@@ -37,12 +37,12 @@ int main() {
 
     const char sentence[] = "The quick brown fox";
 
-    cout << "Find Character 'e': " << charFind(sentence, 'e') << "\n";
-    cout << "Find Substring \"quick\": " << substringFind(sentence, "quick") << "\n";
-    cout << "Find Character ' ': " << charFind(sentence, ' ') << "\n";
-    cout << "Find Character 'z': " << charFind(sentence, 'z') << "\n";    
-    cout << "Find Substring \"quiet\": " << substringFind(sentence, "quiet") << "\n";
-    cout << "Find Substring \"fox\": " << substringFind(sentence, "fox") << "\n";
+    cout << "Find Character 'e': " << find(sentence, 'e') << "\n";
+    cout << "Find Substring \"quick\": " << find(sentence, "quick") << "\n";
+    cout << "Find Character ' ': " << find(sentence, ' ') << "\n";
+    cout << "Find Character 'z': " << find(sentence, 'z') << "\n";    
+    cout << "Find Substring \"quiet\": " << find(sentence, "quiet") << "\n";
+    cout << "Find Substring \"fox\": " << find(sentence, "fox") << "\n";
 
     return 0;
 }
